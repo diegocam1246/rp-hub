@@ -16,7 +16,16 @@ const options = {
   password: '0701pyja',
 }
 
-const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffaa00', '#00aaff', '#ff00aa', '#000000']
+const colors = [
+  '#ff0000',
+  '#00ff00',
+  '#0000ff',
+  '#ffaa00',
+  '#00aaff',
+  '#ff00aa',
+  '#000000',
+  '#FFC896',
+]
 const client = mqtt.connect(brokerUrl, options)
 client.on('connect', () => {
   console.log('Connected to MQTT broker')
@@ -37,6 +46,7 @@ function selectColor(c) {
     '#00aaff': 'Cyan',
     '#ff00aa': 'Magenta',
     '#000000': 'Black',
+    '#FFC896': 'Room',
   }
   selected.value = map[c] ?? 'Unknown'
 
